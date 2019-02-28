@@ -1,4 +1,4 @@
-# Labortory-of-Neuroimaging
+# Laboratory-of-Neuroimaging
 
 ## Overview
 
