@@ -18,3 +18,4 @@ Protons in a magnetic field receive and then transmit electromagnetic energy. Th
 
 SPECT/PET (Single Photon / Positron Emission Computed Tomography)
 Radiolabeled compounds are injected and the compound photon emissions are detected. The images are made from representation of accumulated labeled compound. The compound reflects either blood flow, oxygen or glucose metabolism, or dopamine transporter concentration. 
+
