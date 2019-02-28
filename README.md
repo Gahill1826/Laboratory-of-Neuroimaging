@@ -24,7 +24,7 @@ Radiolabeled compounds are injected and the compound photon emissions are detect
 ![image](https://user-images.githubusercontent.com/28030045/53599874-d6a32180-3b6d-11e9-80f7-769812ce031f.png)
 ![image](https://user-images.githubusercontent.com/28030045/53599907-e3277a00-3b6d-11e9-8eb0-fc1146a362db.png)
 
-##Features
+## Features
 LONI Pipeline is a free distributed system for designing, executing, monitoring, and sharing scientific workflows on grid computing architecture. Unlike other workflow processing environments, Pipeline does not require new tools an services to include or be built against the core Pipeline libraries. All data, services, and tools are referenced as external objects and restrict the scope of its applications. All tools necessary to complete an analysis protocol must first be built as external stand-alone applications or services. Pipeline allows users to create new workflow descriptions, edit existing ones, and share their work with others. 
 
 Pipeline has cross platform compatibility, and the ability to connect from your local client to a remote server for executing processing and analysis on other operating systems. Pipeline grans developers to create their own plugins to communicate with various grid managers. Pipeline packages includes the JGDIPlugin and the DRMAAPlugin created for Sun Grid Engine, but they may work with Oracle Grid Engline, Univa Grid Engine or Son of Grid Engine. Both plugins are housed under the grid plugins directory in the installed package of Pipeline. All additional plugins can be downloaded separately. 
