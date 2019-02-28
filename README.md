@@ -1,5 +1,7 @@
 # Labortory-of-Neuroimaging
 
+## Overview
+
 LONI Software
 Biomedical imaging includes a diverse array of modeling, analysis, and visualization software.
 
@@ -19,4 +21,4 @@ Protons in a magnetic field receive and then transmit electromagnetic energy. Th
 SPECT/PET (Single Photon / Positron Emission Computed Tomography)
 Radiolabeled compounds are injected and the compound photon emissions are detected. The images are made from representation of accumulated labeled compound. The compound reflects either blood flow, oxygen or glucose metabolism, or dopamine transporter concentration. 
 
-![alt text](https://github.com/Gahill1826/Labortory-of-Neuroimaging/issues/1)
+![screen shot](https://github.com/Gahill1826/Labortory-of-Neuroimaging/issues/1)
