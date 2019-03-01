@@ -1,0 +1,78 @@
+Data Preprocessing for Machine learning
+
+Data Preprocessing is a data mining technique that transform raw data into understandable dataset and then applied to an algorithm. Raw data, including null, are incomplete with noisy errors and inconsistent variables are incredibly hard to analysis. For example, Random Forest do not accept null values. 
+General techniques 
+Step 1 : Import the libraries
+Step 2 : Import the data-set
+Step 3 : Check out the missing values
+Step 4 : See the Categorical Values
+Step 5 : Splitting the data-set into Training and Test Set
+Step 6 : Feature Scaling
+
+Techniques
+1.	Rescale Data (use Scikit-learn module, MinMaxScaler class)
+•	Rescale attributes to have the same scale. 
+•	Useful for machine learning algorithms: gradient descent, regression (weigh inputs), neural networks (weigh inputs), K-Nearest Neighbors (distance measures)
+# Python code to Rescale data (between 0 and 1) 
+import pandas 
+import scipy 
+import numpy 
+from sklearn.preprocessing import MinMaxScaler 
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class'] 
+dataframe = pandas.read_csv(url, names=names) 
+array = dataframe.values 
+# separate array into input and output components 
+X = array[:,0:8] 
+Y = array[:,8] 
+scaler = MinMaxScaler(feature_range=(0, 1)) 
+rescaledX = scaler.fit_transform(X) 
+
+# summarize transformed data 
+numpy.set_printoptions(precision=3) 
+print(rescaledX[0:5,:]) 
+
+2.	Convert into Binary (use Scikit-learn module, Binarizer class)
+•	Transform data with binary threshold, above the threshold are “1” and equal to below the threshold are “0”
+# Python code for binarization 
+from sklearn.preprocessing import Binarizer 
+import pandas 
+import numpy 
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class'] 
+dataframe = pandas.read_csv(url, names=names) 
+array = dataframe.values 
+  
+# separate array into input and output components 
+X = array[:,0:8] 
+Y = array[:,8] 
+binarizer = Binarizer(threshold=0.0).fit(X) 
+binaryX = binarizer.transform(X) 
+  
+# summarize transformed data 
+numpy.set_printoptions(precision=3) 
+print(binaryX[0:5,:]) 
+
+3.	Standardize Data (use scikit-learn with StandardScaler class)
+•	Transform attributes with Gaussian distribution by differing mean of 0 and std of 1. 
+# Python code to Standardize data (0 mean, 1 stdev) 
+from sklearn.preprocessing import StandardScaler 
+import pandas 
+import numpy 
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class'] 
+dataframe = pandas.read_csv(url, names=names) 
+array = dataframe.values 
+  
+# separate array into input and output components 
+X = array[:,0:8] 
+Y = array[:,8] 
+scaler = StandardScaler().fit(X) 
+rescaledX = scaler.transform(X) 
+  
+# summarize transformed data 
+numpy.set_printoptions(precision=3) 
+print(rescaledX[0:5,:]) 
+
+
+
