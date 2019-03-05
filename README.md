@@ -8,7 +8,17 @@ LONI includes:
 -Visualization Archive contains a 3D brain atlases.
 
 LONI Software:
-Biomedical imaging includes a diverse array of modeling, analysis, and visualization software.
+Biomedical imaging includes a diverse array of computational modeling algorithms, visualization software tools for comprehensive and quantitative mapping of the brain. 
+Includes software for following:
+-Visualization
+-Data Management
+-Surface Modeling
+-Shape Analysis
+-Image Processing
+-Pre-processing
+-Registration
+-Segmentation
+-Statistical Analysis
 
 LONI Pipeline:
 Is a graphical framework for development, maintain, and dissemination of neuroimaging data analysis protocols. The pipeline environment offers a scalable infrastructure for graphical integration of diverse, complex, and heterogeneous software. Modules and processing workflows, includes segmentation, shap analysis, and cortical thickness workflows. 
@@ -35,4 +45,4 @@ LONI Pipeline is a free distributed system for designing, executing, monitoring,
 Pipeline has cross platform compatibility, and the ability to connect from your local client to a remote server for executing processing and analysis on other operating systems. Pipeline grans developers to create their own plugins to communicate with various grid managers. Pipeline packages includes the JGDIPlugin and the DRMAAPlugin created for Sun Grid Engine, but they may work with Oracle Grid Engline, Univa Grid Engine or Son of Grid Engine. Both plugins are housed under the grid plugins directory in the installed package of Pipeline. All additional plugins can be downloaded separately. 
 
 ## LONI Image and Data Archive (IDA)
-LONI Image and Data Archive (IDA) is an environment to archive, search, share, track, and disseminate neuroimaging data. It accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. A secure measure is in place as a flexible data de-identification engine and encrypted file transmission help ensure compliance with patient-privacy regulations. All data are stored on redundant servers with daily and weekly on and off site backups.  The IDA automatically extracts relevant metadata from de-identified image files, and allows data to be search within moments of archival.
+LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The archival processes begin with LONI Debabeler de-identification applet that de-identify and then encrypt files locally, finally, validate the changes prior to securely transfer image data from local site to LONI IDA. On arrival the data is stored in LONI fault tolerant storage area network and the database is populated with relevant metadata attributes.  All data are stored on redundant servers with daily and weekly on and off site backups.  The IDA automatically extracts relevant metadata from de-identified image files, and allows data to be search within moments of archival.
