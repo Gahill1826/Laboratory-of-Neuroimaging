@@ -21,7 +21,7 @@ Includes software for following:
 -Statistical Analysis
 
 LONI Pipeline:
-Is a graphical framework for development, maintain, and dissemination of neuroimaging data analysis protocols. The pipeline environment offers a scalable infrastructure for graphical integration of diverse, complex, and heterogeneous software. Modules and processing workflows, includes segmentation, shap analysis, and cortical thickness workflows. 
+Is a cross-platform, graphical workflow framework application (written in JAVA) for development, maintenance, and dissemination of neuroimaging data analysis protocols to describe and aggregate executables (module) without coding in a scripting language. The pipeline environment offers a scalable infrastructure for graphical integration of diverse, complex, and heterogeneous software, including, modules and processing workflows, includes segmentation, shap analysis, and cortical thickness workflows. LONI supercomputing environmenets automatically parallelize data-independent programs. Additionally, LONI Pipeline is able to run in a client-server mode, allowing access to compute servers running analysis software from a dedicated machine. 
 
 LONI Research Protocols:
 LONI research protocol supports neuroimaging investigation of brain structure, function, and physiology in health and disease by using comprehensive imaging analysis. 
