@@ -2,16 +2,21 @@
 
 ## Overview
 
-LONI Software
+LONI includes:
+-physical in house Imaging Facilities (2 MRI, Magnetom Prisma 3T and Magnetom Terra 7T
+-Secure Data Center (4 PB) 
+-Visualization Archive contains a 3D brain atlases.
+
+LONI Software:
 Biomedical imaging includes a diverse array of modeling, analysis, and visualization software.
 
-LONI Pipeline
+LONI Pipeline:
 Is a graphical framework for development, maintain, and dissemination of neuroimaging data analysis protocols. The pipeline environment offers a scalable infrastructure for graphical integration of diverse, complex, and heterogeneous software. Modules and processing workflows, includes segmentation, shap analysis, and cortical thickness workflows. 
 
-LONI Research Protocols
+LONI Research Protocols:
 LONI research protocol supports neuroimaging investigation of brain structure, function, and physiology in health and disease by using comprehensive imaging analysis. 
 
-Techniques in Neuroimaging
+Techniques in Neuroimaging:
 CT (Roentgen-Ray Computed Tomography)
 A beam of x-ray passes through the brain and is detected according to the density of the tissue encountered. Detectors positioned around the circumference of the scanner collect attenuation readings from multiple angles. A computerized algorithm reconstructs an image of each slice. 
 
