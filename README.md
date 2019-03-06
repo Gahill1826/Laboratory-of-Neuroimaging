@@ -43,7 +43,12 @@ Radiolabeled compounds are injected and the compound photon emissions are detect
 ![image](https://user-images.githubusercontent.com/28030045/53599907-e3277a00-3b6d-11e9-8eb0-fc1146a362db.png)
 
 ## LONI Image and Data Archive (IDA)
-LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The archival processes begin with LONI Debabeler de-identification applet that de-identify and then encrypt files locally, finally, validate the changes prior to securely transfer image data from local site to LONI IDA. On arrival the data is stored in LONI fault tolerant storage area network and the database is populated with relevant metadata attributes.  All data are stored on redundant servers with daily and weekly on and off site backups.  The IDA automatically extracts relevant metadata from de-identified image files, and allows data to be search within moments of archival.
+LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups.  The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
+
+ 
+Single Archive process upload one more file from a single subject. 
+Batch Archive process upload multiple subjects and image series in a batch with similar or different file formats and modalities. 
+
 
 Modules:
 Freesurfer:
