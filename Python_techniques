@@ -41,3 +41,9 @@ quickSort(array,0,n-1)
 print ("The Sorted array is:")
 for i in range(n):
     print ("%d" %array[i]),
+
+Dynamic Programming
+
+Data Structures
+
+Hash Tables
