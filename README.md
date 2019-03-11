@@ -29,6 +29,9 @@ Pipeline has cross platform compatibility, and the ability to connect from your 
 LONI Research Protocols:
 LONI research protocol supports neuroimaging investigation of brain structure, function, and physiology in health and disease by using comprehensive imaging analysis. 
 
+Atlases (of human and animal diseases) (Alzheimer is the largest database)
+A desire to understand brain spatial characteristics; structure, features, shape and characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrate information from multiple representations of the brain to increase confidence in statistical and visual power. 
+
 Techniques in Neuroimaging:
 CT (Roentgen-Ray Computed Tomography)
 A beam of x-ray passes through the brain and is detected according to the density of the tissue encountered. Detectors positioned around the circumference of the scanner collect attenuation readings from multiple angles. A computerized algorithm reconstructs an image of each slice. 
