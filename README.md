@@ -37,7 +37,7 @@ LONI Research Protocols:
 LONI research protocol supports neuroimaging investigation of brain structure, function, and physiology in health and disease by using comprehensive imaging analysis. 
 
 Brain Atlases (of human and animal) (Alzheimer is the largest open database)
-LONI brain atlases were created from a desire to standardize brain image databases and understand brain spatial characteristics; structure, features and relationships with other features, shape and the associated characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrates information by applying appropriate registrations, warping strategies, indexing schemes and nomenclature systems on multiple representations of the brain are collected to increase confidence in statistical and visual power. LONI atlases is separated into mapping of the whole brain and maps of groups or populations. 
+LONI brain atlases were created from a desire to standardize brain image databases and understand brain spatial characteristics; structure, features and relationships with other features, shape and the associated characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrates information by applying validation, warping algorithms, indexing schemes and nomenclature systems on multiple representations of the brain are collected to increase confidence in statistical and visual power. LONI atlases is separated into mapping of the whole brain and maps of groups or populations. 
 
 
 LONI Debabeler (JAVA Image I/O Plugin Architecture 1.4):
