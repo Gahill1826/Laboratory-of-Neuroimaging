@@ -36,8 +36,9 @@ https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-21
 LONI Research Protocols:
 LONI research protocol supports neuroimaging investigation of brain structure, function, and physiology in health and disease by using comprehensive imaging analysis. 
 
-Atlases (of human and animal diseases) (Alzheimer is the largest database)
-A desire to understand brain spatial characteristics; structure, features, shape and characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrate information from multiple representations of the brain to increase confidence in statistical and visual power. 
+Brain Atlases (of human and animal) (Alzheimer is the largest open database)
+LONI brain atlases were created from a desire to standardize brain image databases and understand brain spatial characteristics; structure, features and relationships with other features, shape and the associated characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrates information by applying appropriate registrations, warping strategies, indexing schemes and nomenclature systems on multiple representations of the brain are collected to increase confidence in statistical and visual power. LONI atlases is separated into mapping of the whole brain and maps of groups or populations. 
+
 
 LONI Debabeler (JAVA Image I/O Plugin Architecture 1.4):
 Uses appropriate file translations to automatically convert (ANALYZE, MINC, and variants of DICOM, and proprietary formats used for fMRI and MRS files) neuroimaging software packages file format between each pair of linked packages. File translations consists of Debabeler GUI to visualize the translation. The data translation engine: 1. Identify image file metadata characteristics; 2. Group similar data together according to user-define values from metadata; 3. Translate images by reading metadata, pixel data, mapping data into specified output file format. Translations steps includes arithmetic, string operations, image pixel manipulations, and physical system transformations. Allows users the ability to create new translations by editing common “core” translations. 
