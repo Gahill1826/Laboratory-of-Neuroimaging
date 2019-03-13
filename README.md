@@ -9,7 +9,7 @@ LONI includes:
 
 LONI Software:
 Biomedical imaging includes a diverse array of computational modeling algorithms, visualization software tools for comprehensive and quantitative mapping of the brain. 
-JAVA and python based softwares packaged in LONI pipeline. 
+JAVA, C++, python based softwares packaged in LONI pipeline. 
 -Visualization
 -Data Management
 -Surface Modeling
@@ -83,6 +83,9 @@ Two step process (de-identification and transmission)
 Debabler (Java applet) removes and replace data image header
 An option to manually valid the de-identify image before transmission
 All relevant image metadata are stored in IDA database after transfer. 
+
+Data processing
+BrainSuite2 – is a LONI C++, MRI image analysis tool designed for identifying tissue types and surfaces in MR images of human head. Specifically designed to guide users through the process of cortical surface extraction. 
 
 LONI data center storage environment includes 4096 processor core and 38 Terabytes of memory, and storage cluster of 66 nodes with 7.5 Petabytes of high-performing storage.  
 
