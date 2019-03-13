@@ -84,6 +84,7 @@ Debabler (Java applet) removes and replace data image header
 An option to manually valid the de-identify image before transmission
 All relevant image metadata are stored in IDA database after transfer. 
 
+LONI data center storage environment includes 4096 processor core and 38 Terabytes of memory, and storage cluster of 66 nodes with 7.5 Petabytes of high-performing storage.  
 
 Modules:
 Freesurfer:
