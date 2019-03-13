@@ -9,7 +9,7 @@ LONI includes:
 
 LONI Software:
 Biomedical imaging includes a diverse array of computational modeling algorithms, visualization software tools for comprehensive and quantitative mapping of the brain. 
-Includes software for following:
+JAVA and python based softwares packaged in LONI pipeline. 
 -Visualization
 -Data Management
 -Surface Modeling
@@ -61,13 +61,28 @@ Radiolabeled compounds are injected and the compound photon emissions are detect
 ## LONI Image and Data Archive (IDA)
 LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
 
+Creating an account is free and straight forward. 
+Includes dynamic (beta) “Advanced Image search” function. 
+Image metadata are stored and extracted in .csv format. 
+Image data details contains weighting, pulse sequence, acquisition type, etc. 
+Image collection: view, remove, regroup or download single images and entire collections of either personnel and shared collections in Analyze, NIfTI, NiFTI 4D, MINC format. 
+
 Images can be viewed with IDA Image Viewer (Java based) software. IDA image metadata are stored in .csv format. 
 
 (Low) System Requirements: Internet access, support IE, Mozilla, Safari, and Chrome web brower, Java plug-in (version 1.5 or higher), and approved IDA account.
 
- 
+Downloading IDA image
+Including feature projects from different groups and collaborating institutions.
+Include internal download Manager are incredibly useful, due to the software ability to continue download from disrupted connections. Some image sets are incredibly huge. 
+
 Single Archive process upload one more file from a single subject. 
 Batch Archive process upload multiple subjects and image series in a batch with similar or different file formats and modalities. 
+
+IDA archive
+Two step process (de-identification and transmission)
+Debabler (Java applet) removes and replace data image header
+An option to manually valid the de-identify image before transmission
+All relevant image metadata are stored in IDA database after transfer. 
 
 
 Modules:
