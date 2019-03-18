@@ -53,12 +53,19 @@ http://pipeline.loni.usc.edu/products-services/brain-book/
 LONI Pipeline Notable Workflow Features: http://pipeline.loni.usc.edu/learn/quick-start/
 - Building or using pre-built modules 
 - Connecting modules (Inputs on top, Outputs on bottom) (Initial checking prevents file types from connecting to number type parameters)
+- Smartline: Automatic file conversion tool enabling connection between different image formats. EG. Analyze Image (.img), NIFT (nii), or MINC (mnc)
+- Estable (local) Data sources and data sinks OR Could sources and cloud sinks. 
 - Setting parameter values
 - Processing multiple inputs
+- Adding Metadata: incorporate imaging data and non-imaging meta-data together with Conditional criteria from modules. 
 - Enable/Disable parameters
 
 
-## LONI Image and Data Archive (IDA)
+
+## LONI Image and Data Archive (IDA):
+
+Pipeline use cluster nodes to download files in parallel from the IDA db. Pipeline also enable metadata. 
+
 LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
 
 Creating an account is free and straight forward. 
