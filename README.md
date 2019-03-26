@@ -1,5 +1,3 @@
-
-At 
 # Laboratory-of-Neuroimaging
 
 ## Overview
@@ -27,11 +25,13 @@ A client server distributed computational environment that facilitates visual gr
 Pipeline use cluster nodes to download files in parallel from the IDA db. Pipeline also enable metadata. 
 
 Key Features:
+-Preprocessing steps common to both subcortical and cortical analyses
 -Flexible graphical environment for constructing complex scientific analyzes of data. 
+-Input and output files and binaries on remote servers as well as local computer within a single workflow
 -Cross Platform Compatible
 -Simple User Interface
 -Pipeline Library
--Grid Support
+- Grid and DB interfaces (Oracle Grid Engine)
 --Creating conditional and iterating module
 --Tools usage stats
 --Server status charts
@@ -41,8 +41,10 @@ Key Features:
 --Imaging and meta-data processing
 --Error log data sinks
 --Annotation features
---Distributed client server and platform agnostic computational infrastructure
---Grid and DB interfaces
+--Distributed Pipeline Client Server
+1.	Backend grid management resources (Oracle Grid Engine)
+2.	Pipeline server
+3.	Platform agnostic computational infrastructure (imaging and informatics software tools)
 
 
 Unlike other workflow processing environments, Pipeline does not require new tools and services to include or be built against the core Pipeline libraries. All data, services, and tools are referenced as external objects. This allows the Pipeline to run as a light-weight middleware, but at the same time, restrict the scope of its applications. For example, the Pipeline does not provide a set of internal core libraries, filters, and processes for image processing. All tools necessary to complete an analysis protocol must first be built as external stand-alone applications or services, the interface methods are then described in Pipeline XML language. LONI Cranium server contains multiple prebuilt XML modules and workflows software applications, including FMRIB Software Library (image analysis and statistical tools written in C++for functional and diffusion MRI data), Analysis of Functional NeuroImages (open-source environment written with C for processing and displaying fMRI data), and FreeSurfer. Pipeline allows users to create new workflow descriptions, edit existing ones, and share their work with others.
@@ -85,9 +87,8 @@ LONI Pipeline Notable Workflow Features: http://pipeline.loni.usc.edu/learn/quic
 
 ## LONI Image and Data Archive (IDA):
 
-LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
+LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, share, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. Neuroimaging data files are categorized as cluster nodes for parallel downloading and improving time efficiency.  The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
 
-Creating an account is free and straight forward. 
 Includes dynamic (beta) “Advanced Image search” function. 
 Image metadata are stored and extracted in .csv or .XML format. 
 Image data details contains weighting, pulse sequence, acquisition type, etc. 
