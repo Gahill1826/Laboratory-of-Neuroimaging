@@ -20,6 +20,35 @@ JAVA, C++, and python based software packaged in LONI pipeline.
 -Segmentation
 -Statistical Analysis
 
+PowerPoint Overall Workflow:
+1.	Anonymize subject
+2.	Preprocess (cortical and subcortical) images
+a.	Subcortical 
+i.	Structure delineation
+ii.	Anonymizing the subject
+iii.	Registering the brain to an Atlas
+iv.	(Potential) Bias field correction
+b.	Cortical
+i.	“Masking” is a binary file covering the region of the MRI file of interest that removes the skull and extra-cortical tissue, to divide the brain into hemispheres, or to isolate/represent Region Of Interest (ROI). LONI tools to generate and/or edit existing masks: BrainSuite2 (Analyze format), Display (Minc format)
+3.	Processing Steps For Cortical Surface Extraction And Sulcal Analysis (Powerpoint)
+a.	Extracting the cortical surface
+b.	Drawing sulcal lines (Selineate the sulci for each subject.)
+c.	Cortical pattern matching (page 69) 
+i.	flat mapping (transforms an image 3D object file into a 2D flatmap of the cortex which is sored as a 2D uvl file)
+ii.	warping (the averaging of all sulci are used as anchors to warp the flatmaps of individual cases into an average space)
+iii.	reinflation (the warped flatmaps are reinflated to 3D UCF files.)
+4.	Separation of Gray Matter, White Matter, and CSF
+a.	Segmentation, tissue classification, defines a volume by tissue type (density or thickness)
+i.	3-class tissue segmentation (most commonly used) (1. Gray matter, 2. White matter, and 3. Cerebral spinal fluid.) 
+ii.	(Potential) 5-class tissue segmentation (4. Gray matter with White matter overlap, 5. Gray matter and Cerebral spinal fluid)
+iii.	Signal values are evaluated according to frequency, while measuring differences across the whole brain and classifying the signal values accordingly to tissue type. 
+5.	Cortical surface Analyses
+a.	Sulcal analysis
+b.	Complexity of cortical Surface
+c.	Local brain size
+d.	Gray matter density
+e.	Maps of cortical thickness
+
 LONI Pipeline / Pipeline Web Start (PWS):
 A client server distributed computational environment that facilitates visual graphical construction, execution, monitoring, validation, and dissemination of advanced data analysis protocols. Additionally, LONI pipeline is a free cross-platform graphical workflow framework application (written in JAVA) primarily aimed at neuroimaging researchers development, maintenance, dissemination, and sharing neuroimaging data analysis protocols on a (self-maintained or) on-site 600 CPU computing grid (distributed systems within non-interactive workloads) to describe and aggregate executables (module) without coding in a scripting language to create complex analyses. The pipeline environment offers a scalable infrastructure for graphical integration of diverse, complex, and heterogeneous software, including, modules and processing workflows, includes segmentation, sharp analysis, and cortical thickness workflows. LONI supercomputing environments automatically parallelize data-independent programs. Additionally, LONI Pipeline can run in a client-server mode, allowing access to compute servers running analysis software from a dedicated machine.
 Pipeline use cluster nodes to download files in parallel from the IDA db. Pipeline also enable metadata. 
@@ -62,10 +91,11 @@ Brain Atlases (of human and animal) (Alzheimer is the largest open database)
 LONI brain atlases were created from a desire to standardize brain image databases and understand brain spatial characteristics; structure, features and relationships with other features, shape and the associated characteristics, and region of functional activation. These characteristics are used to index schemes and nomenclature systems. LONI brain atlas integrates information by applying validation, warping algorithms, indexing schemes and nomenclature systems on multiple representations of the brain are collected to increase confidence in statistical and visual power. LONI atlases is separated into mapping of the whole brain and maps of groups or populations. 
 
 
-LONI Debabeler (JAVA Image I/O Plugin Architecture 1.4) (Main LONI Workflow):
-Uses appropriate file translations to automatically convert (ANALYZE, MINC, and variants of DICOM, and proprietary formats used for fMRI and MRS files) neuroimaging software packages file format between each pair of linked packages. File translations consists of Debabeler GUI to visualize the translation. The data translation engine: 1. Identify image file metadata characteristics; 2. Group similar data together according to user-define values from metadata; 3. Translate images by reading metadata, pixel data, mapping data into specified output file format. Translations steps includes arithmetic, string operations, image pixel manipulations, and physical system transformations. Allows users the ability to create new translations by editing common “core” translations. 
+Anonymize Subject:
+LONI Debabbler (JAVA Image I/O Plugin Architecture 1.4) (Main LONI Workflow):
+Uses appropriate file translations (e.g. Analysis of functional neuroimages) to automatically convert (ANALYZE, MINC, and variants of DICOM, and proprietary formats used for fMRI and MRS files, NifTI, and etc) neuroimaging software packages file format between each pair of linked packages. File translations consists of Debabbler GUI to visualize the translation. The data translation engine: 1. Identify image file metadata characteristics; 2. Group similar data together according to user-define values from metadata; 3. Translate images by reading metadata, pixel data, mapping data into specified output file format. Translations steps includes arithmetic, string operations, image pixel manipulations, and physical system transformations. Allows users the ability to create new translations by editing common “core” translations. 
 
-Unique/Purpose: Visual programming environment allows an easy alternative way to alter existing translations of data. Source code in “LONI Image I/O Plugin download”. Medical imaging data is collected and encoded into a specified file format. Despite efforts to standardize file formats, there are invariably significant difference in elements available, elements stored, and interpretation of elements. Knowing file format does not reveal appropriately method to extract and use metadata. LONI Debabeler addresses these issues by enabling users easier access to image metadata and providing users a flexible and programmable environment in which to manipulate metadata between file formats.
+Unique/Purpose: Visual programming environment allows an easy alternative way to alter existing translations of data. Source code in “LONI Image I/O Plugin download”. Medical imaging data is collected and encoded into a specified file format. Despite efforts to standardize file formats, there are invariably significant difference in elements available, elements stored, and interpretation of elements. Knowing file format does not reveal appropriately method to extract and use metadata. LONI Debabbler addresses these issues by enabling users easier access to image metadata and providing users a flexible and programmable environment in which to manipulate metadata between file formats.
 -Tools and modules are cached on user computer enabling offline workflow construction. 
 
 NOTABLE FEATURES:
@@ -76,7 +106,7 @@ http://pipeline.loni.usc.edu/products-services/brain-book/
 LONI Pipeline Notable Workflow Features: http://pipeline.loni.usc.edu/learn/quick-start/
 - Building or using pre-built modules 
 - Connecting modules (Inputs on top, Outputs on bottom) (Initial checking prevents file types from connecting to number type parameters)
-- Smartline (dragging output to input): Automatic file conversion tool enabling connection between different image formats. EG. Analyze Image (.img), NIFT (nii), or MINC (mnc)
+- Smartline: Automatic file conversion tool, enabling connection between different image formats. E.G. Analyze Image (.img), NIFT (nii), or MINC (mnc)
 - Establish (local) Data sources and data sinks OR Cloud sources and Cloud sinks (Tools > Database & Cloud Storage > Cloud Storage tab). This method is used when users want to use a single piece of data as an input to multiple modules in a workflow, or make the workflow easier to understand. 
 - Setting parameter values (right clicking input/output)
 - Processing multiple inputs
@@ -87,7 +117,7 @@ LONI Pipeline Notable Workflow Features: http://pipeline.loni.usc.edu/learn/quic
 
 ## LONI Image and Data Archive (IDA):
 
-LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, share, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. Neuroimaging data files are categorized as cluster nodes for parallel downloading and improving time efficiency.  The image archival processes begin with LONI Debabeler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabeler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
+LONI Image and Data Archive (IDA) is a web-browser environment to aggregate, archive, share, and disseminate neuroimaging data. IDA accommodates MRI, fMRI, PET, MRA, DTI, and other imaging modalities. Neuroimaging data files are categorized as cluster nodes for parallel downloading and improving time efficiency.  The image archival processes begin with LONI Debabbler de-identification applet and local encryption, validation, and finally transmission to LONI IDA. Debabbler removes and replace potentially identifying subject information’s from image headers. The IDA automatically extracts relevant metadata from de-identified image files and allows data to be search of archival. On arrival the data is stored in LONI compliance with patient-privacy regulations, fault tolerant storage area network and the database are populated with relevant metadata attributes.  Archive accepts (type 1 headers) DICOM, GE, Philips, HRRT, and ECAT files, and (type 2 headers) Analyze and MINC files. All data are stored on redundant servers with daily and weekly on- and off-site backups. Data can be downloaded and /or streamed into LONI Pipeline workflow environment for processing and analysis. 
 
 Includes dynamic (beta) “Advanced Image search” function. 
 Image metadata are stored and extracted in .csv or .XML format. 
@@ -111,10 +141,10 @@ Debabler (Java applet) removes and replace data image header
 An option to manually valid the de-identify image before transmission
 All relevant image metadata are stored in IDA database after transfer. 
 
-Data pre- and processing
-AIR (Automated Image Registration) Registration Workflow - A registration algorithm generates a transformation matrix and applies it to move MRI images into the standard space. 
-
-BrainSuite2 – is a LONI C++, collection of analysis tools designed to process raw MRI of the human head for identifying tissue types and surfaces in MR images of human head. Specifically designed to guide users through the process of cortical surface extraction. Workflow objective is to generate a file containing labels for gray matter, white matter, and cerebrospinal fluid.   
+Data pre- and processing (DEMO)
+AIR (Automated Image Registration) Registration - An automated (3D or 2D) image registration algorithm that generates a transformation matrix and applies it to move MRI images of different modalities either between or across subjects into the standard space. 
+BrainSuite2 – is a LONI C++, collection of analysis tools designed to process raw MRI of the human head for identifying tissue types and surfaces. BrainSuite was specifically designed to guide users through the process of cortical surface extraction. Workflow objective is to generate a file containing labels for gray matter, white matter, and cerebrospinal fluid.   
+Brain Surface Extraction: Removes non-brain tissue from the MRI using a combination of anisotropic diffusion filtering (reduce image noise without blurring edges), MArr-Hildreth edge detection (digital image edges detection), and mathematical morphology (processing of geometrical structures).
 •	Skull strip the brain volume.
 •	Perform Inhomogeneity correction.
 •	Prepping the image for the tissue classifier. 
